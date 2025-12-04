@@ -271,38 +271,51 @@ Table 1: Data on the increase of nitinol in the near future
       </tr>
     </table>
 
-    <head>
-<title>Nitinol Market Size</title>
-        <script type=”text/javascript” src=https://jsfiddle.net/api/post/library/pure/>
-        <div id=”chart_div”></div>
+    <title>Nitinol Market Size</title>
+    <headscript type=”text/javascript” src=https://www.gstatic.com/charts/loader.js>
+    <div id="chart_div"></div>
+        <head>
+        
         <script type=”text/javascript”>
-google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
-google.charts.setOnLoadCallback(drawChart); 
-            function drawBackgroundColor() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Market size');
+            google.charts.load("current", { packages : ["corechart", "line"] });
+            google.charts.setOnLoadCallback(drawBackgroundColor); 
+            
+      function drawBackgroundColor() {     
+            var data = new google.visualization.DataTable();      
+            data.addColumn("number", "X");     
+            data.addColumn("number", "Market size");
 
       data.addRows([
-        [2024, 2.29],   [2025, 2.46],  [2026, 2.65],  [2027, 2.85],  [2028, 3.07],  [2029, 3.30],
-        [2030, 3.55],  [2031, 3.82],  [2032, 4.11],  [2033, 4.43],  [2034, 4.76]
+        [2024, 2.29],   
+        [2025, 2.46],  
+        [2026, 2.65],  
+        [2027, 2.85],  
+        [2028, 3.07],  
+        [2029, 3.30],
+        [2030, 3.55],  
+        [2031, 3.82],  
+        [2032, 4.11],  
+        [2033, 4.43],  
+        [2034, 4.76],
       ]);
-
-      var options = {
+     
+        var options = {
         hAxis: {
-          title: 'Year'
+          title: "Year",
         },
         vAxis: {
-          title: 'Market size of nitinol(billion/$)'
+          title: "Market size of nitinol(billion/$)",
         },
       };
 
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      var chart = new google.visualization.LineChart(
+            document.getElementById("chart_div"),
+            );
       chart.draw(data, options);
     }
             </script>
-        </script>
-</head>
+
+        </head>
     
         <h3 id="References">References</h3>
     <p class="ex1">
