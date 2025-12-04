@@ -271,6 +271,33 @@ Table 1: Data on the increase of nitinol in the near future
       </tr>
     </table>
 
+    <head>
+google.charts.setOnLoadCallback(drawBackgroundColor);
+
+function drawBackgroundColor() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Market size');
+
+      data.addRows([
+        [2024, 2.29],   [2025, 2.46],  [2026, 2.65],  [2027, 2.85],  [2028, 3.07],  [2029, 3.30],
+        [2030, 3.55],  [2031, 3.82],  [2032, 4.11],  [2033, 4.43],  [2034, 4.76]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Year'
+        },
+        vAxis: {
+          title: 'Market size of nitinol(billion/$)'
+        },
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+</head>
+    
         <h3 id="References">References</h3>
     <p class="ex1">
       <pre style="font-family: calibri;">
